@@ -1,0 +1,35 @@
+Jen Anderson
+anderjen@onid.oregonstate.edu
+CS311-400
+Homework 1
+Questions 2-5
+
+2.  What are Revision Control Systems(sometimes called Version Control Systems)?  Why are they useful?  Name 4 examples of revision control systems.  List 3 common 
+    commands for each of the 4 revision control systems you identify.
+
+	Revision control systems are systems that manage multiple revisions of files (from http://gnu.org/software/rcs/).  They are useful because they allow users to 
+	return to previous versions of documents they have changed if the changes don't work.  Four examples of revision control systems are GNU RCS, Git, 
+	SVN(Subversion), and Mercurial.  All 4 of these RCS have a ci command, which commits changes from a working copy to a repository.  They also all have a revert
+	command for reverting changes that were made on a file.  Finally, all four systems have an diff command which displays the differences between 2 revisions.  In 	
+	the GNU RCS this command is called rcsdiff.    
+
+3.  Describe the difference between redirection and piping on Unix
+
+	Piping on Unix is connecting the output of one program to the input of another program.  This is done by running piping two programs together so that one 
+	program runs right after the next.  Redirection is used to send output to somewhere other than the screen, such as a file.  
+
+4.  Give a find command that will run the file command on every regular file (not directories!) within the current file system sub-tree(pwd and down)  Run this from 
+    your home directory.  HINT: look at the man pages for both find and file.  The man page for find is long, but has some really good examples in it, near the end of 
+    the man page.  The man page for file tells you about "magic tests" and "magic numbers".  Man pages are good.
+
+	The command "find -type f -exec file {} +" runs the file command on the results of the find -type f command.  Running from the home directory results in a list 
+	all the regular files followed by their types.  
+
+5.  What is the Unix command make and how is it useful?
+
+	The Unix make allows multiple files to be grouped together to make one program.  It determines automatically which parts of a large program need to be 
+	recompiled and then issues the commands to recompile.  The 'makefile' describes the relationships between the files in a program.  Once a makefile exists, if 
+	you change the source code in any of your files, you don't have to recompile each file individually.  Instead, just run the 'make' command, which recompiles 
+	any source files that need to be updated.  (answer from www.gnu.org/software/make/manual/make.html) 
+
+
